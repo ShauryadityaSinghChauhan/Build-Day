@@ -17,7 +17,6 @@ add.onclick = () => {
     if (!n || n <= 0) return;
 
     let id = Date.now();
-
     timers.push({
         id: id,
         time: n,
@@ -65,7 +64,7 @@ function start(t) {
             t.run = false;
             update(t.id);
             sound.play();
-
+            alert("Time Finished")
             if (Notification.permission === "granted") {
                 new Notification("Timer finished!");
             }
